@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    </head>
+    <body>
+        <!-- 
+       <h1>떠든사람</h1>
+       <ol>
+        <li>권유진</li>
+        <li>류제욱</li>
+        <li>안예선</li>
+        <li>정소진</li>
+        <li>조은경</li>
+       </ol> !-->
+       <script>
+        
+        /*
+        let str = "<h1>늦게온 사람</h1>";
+        str += "<ol>";
+        str = str + "<li>권유진</li>";
+        str = str + "<li>류제욱</li>";
+        str += "<li>권유진</li>";  //str = str + 권유진과 같다.
+        str += "<li>류제욱</li>";
+        str += "</ol>";
+        document.write(str);
+        //html에 팝업 띄우는 삼총사 (가장 먼저 실행됨.)
+        alert(str); //yes만 
+        rompt(str); // 사용자가 텍스트 입력할 수 있는창
+        confiprm(str); // 사용자가 yes or no 선택할 수 있는창
+        */
+       /*
+       alert("경고!!!");
+       let name = prompt("이름을 입력하세요"); //사용자가 입력한것을 저장할 수 있다.
+       document.write(name + "님 환영합니다.");
+       
+       let a = confirm(); 
+       document.write("<br>");
+       document.write(a);
+       */
+      /*
+       let n = prompt("당신의 이름은?", "이재권");
+       let k = prompt("당신의 키는?");
+       let w = prompt("당신의 몸무게는?");
+       let aw = (k - 100) * 0.9; //평균체중
+       let i , j;
+
+       j = aw * 0.05;
+       i = w > aw ? "돼지" : "딱좋아";
+       document.write(i);
+       
+       document.write("<br>");
+       
+
+       i = w<(aw+j) || w>(aw+j) ? "딱좋아" : "돼지";
+       document.write(n + "님은" +i);
+       */
+      
+       let a = 3000, b = 6000, c = 3000, i = 10000, r1;
+       r1 = i < (a + b + c) ? (a+b+c) - i + "원 초과" : "돈 관리를 잘 했어요";
+       document.write(r1);
+       document.write("<br>");
+       
+
+       let p1 = 1200, p2 = 1300, p3 = 1000, p4 = Number(prompt("4분기 판매량")), avgP, r2; //prompt 받을 때 string 타입으로 들어감.
+    
+       avgP = Number((p1 + p2 + p3 + p4)) / 4; 
+       r2 = avgP <= p4 ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+       //document.write(p4);
+       //document.write(avgP);
+       document.write(r2);
+    
+
+       </script>
+        
+    </body>
+    </html>
