@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NewProject</string>
+    <string name="healthbar">HealthBar</string>
+    <string name="chest">가슴</string>
+    <string name="shoulder">어깨</string>
+    <string name="back">등</string>
+    <string name="leg">하체</string>
+    <string name="데드리프트">데드리프트</string>
+    <string name="벤치프레스">벤치프레스</string>
+    <string name="체스트플라이">체스트플라이</string>
+    <string name="팔굽혀펴기">팔굽혀펴기</string>
+    <string name="평점">평점</string>
+    <string name="밀리터리프레스">밀리터리 프레스</string>
+    <string name="벤트오버레이즈">벤트오버 레이즈</string>
+    <string name="사이드레터럴레이즈">사이드 레터럴 레이즈</string>
+    <string name="평점2">평점</string>
+    <string name="풀업">풀 업</string>
+    <string name="로우덤벨벤트오버">로우 덤벨 벤트 오버</string>
+    <string name="평점3">평점</string>
+    <string name="레그프레스">레그 프레스</string>
+    <string name="스쿼트">스쿼트</string>
+    <string name="런지">런지</string>
+    <string name="평점4">평점</string>
+    <string name="시작">시작</string>
+    <string name="시작1">시작</string>
+    <string name="시작2">시작</string>
+    <string name="시작3">시작</string>
+    <string name="중단">중단</string>
+    <string name="초기화">초기화</string>
+
+
+</resources>

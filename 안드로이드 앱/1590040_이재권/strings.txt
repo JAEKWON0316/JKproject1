@@ -1,0 +1,13 @@
+strings
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Text1">선택을 시작하겠습니까?</string>
+    <string name="Text2">좋아하는 안드로이드 버전은?</string>
+    <string name="Switch1">시작함</string>
+    <string name="Rnugat">누가(7.0)</string>
+    <string name="Roreo">오레오(8.0)</string>
+    <string name="Rpie">파이(9.0)</string>
+    <string name="BtnClose">종료</string>
+    <string name="BtnBack">처음으로</string>
+
+</resources>

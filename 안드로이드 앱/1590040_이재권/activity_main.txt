@@ -1,0 +1,96 @@
+activity_main.xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/Text1"
+        android:textSize="30sp" />
+
+    <Switch
+        android:id="@+id/Switch1"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="@string/Switch1"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/Text2"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+    <RadioGroup
+        android:id="@+id/Rgroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="invisible" >
+
+        <RadioButton
+            android:id="@+id/Rnugat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/Rnugat"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/Roreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/Roreo"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/Rpie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/Rpie"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ImgAD"
+        android:layout_width="77dp"
+        android:layout_height="79dp"
+        android:visibility="invisible"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/BtnClose"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/BtnClose"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/BtnBack"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/BtnBack"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+
+</LinearLayout>

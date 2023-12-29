@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:format="운동 시간 : %s"
+        android:gravity="center"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/BtnStart"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:text="@string/시작"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/BtnStop"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:text="@string/중단"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/BtnReset"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:text="@string/초기화"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:text="@string/데드리프트"
+        android:textSize="30sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:text="@string/풀업"
+        android:textSize="30sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="268dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:text="@string/로우덤벨벤트오버"
+        android:textSize="30sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar3"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5" />
+
+    <Button
+        android:id="@+id/BtnAvg"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:text="@string/평점3"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/AvgView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:textSize="24sp" />
+
+</LinearLayout>

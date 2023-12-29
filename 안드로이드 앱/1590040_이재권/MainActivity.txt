@@ -1,0 +1,104 @@
+MainActivity.java
+
+package com.example.myapplication;
+
+import android.os.Bundle;
+import android.view.View;
+import android.awidget.Button;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    TextView text1, text2;
+    Switch switch1;
+    RadioGroup rgroup1;
+    RadioButton rnugat, roreo, rpie;
+    Button btnClose, btnBack;
+    ImageView imgAD;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        setTitle("안드로이드 사진 보기");
+
+        text1 = (TextView) findViewById(R.id.Text1);
+        text2 = (TextView) findViewById(R.id.Text2);
+        switch1 = (Switch) findViewById(R.id.Switch1);
+        rgroup1 = (RadioGroup) findViewById(R.id.Rgroup1);
+        rnugat = (RadioButton) findViewById(R.id.Rnugat);
+        roreo = (RadioButton) findViewById(R.id.Roreo);
+        rpie = (RadioButton) findViewById(R.id.Rpie);
+        imgAD = (ImageView) findViewById(R.id.ImgAD);
+        btnClose = (Button) findViewById(R.id.BtnClose);
+        btnBack = (Button) findViewById(R.id.BtnBack);
+
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean
+                    isChecked) {
+
+                if(switch1.isChecked() == true) {
+                    text2.setVisibility(android.view.View.VISIBLE);
+                    rgroup1.setVisibility(android.view.View.VISIBLE);
+                    imgAD.setVisibility(android.view.View.VISIBLE);
+                    btnClose.setVisibility(android.view.View.VISIBLE);
+                    btnBack.setVisibility(android.view.View.VISIBLE);
+
+                }
+                else
+                {
+                    text2.setVisibility(android.view.View.INVISIBLE);
+                    rgroup1.setVisibility(android.view.View.INVISIBLE);
+                    imgAD.setVisibility(android.view.View.INVISIBLE);
+                    btnClose.setVisibility(android.view.View.INVISIBLE);
+                    btnBack.setVisibility(android.view.View.INVISIBLE);
+
+                }
+            }
+        });
+        rnugat.setOnClickListener(new View.OnClickListener (){
+            public void onClick(View arg0){
+                imgAD.setImageResource(R.drawable.nougat);
+            }
+        });
+        roreo.setOnClickListener(new View.OnClickListener (){
+            public void onClick(View arg0){
+                imgAD.setImageResource(R.drawable.oreo);
+            }
+        });
+        rpie.setOnClickListener(new View.OnClickListener (){
+            public void onClick(View arg0){
+                imgAD.setImageResource(R.drawable.pie);
+            }
+        });
+        btnClose.setOnClickListener(new View.OnClickListener (){
+            public void onClick(View v){
+                android.os.Process.killProcess(android.os.Process.myPid());
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener (){
+            public void onClick(View v){
+                text2.setVisibility(android.view.View.INVISIBLE);
+                rgroup1.setVisibility(android.view.View.INVISIBLE);
+                imgAD.setVisibility(android.view.View.INVISIBLE);
+                btnClose.setVisibility(android.view.View.INVISIBLE);
+                btnBack.setVisibility(android.view.View.INVISIBLE);
+                imgAD.setImageResource(0);
+                switch1.setChecked(false);
+                rnugat.setChecked(false);
+                rpie.setChecked(false);
+                roreo.setChecked(false);
+
+
+            }
+        });
+
+    }
+}
+
