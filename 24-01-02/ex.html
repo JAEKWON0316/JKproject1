@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    </head>
+    <body>
+        <form action="" method="get">
+        <!-- <div>
+            <label>한줄텍스트</label>
+            <input type="text">
+        </div> -->
+        <div>
+            <label for="userid">한줄텍스트</label>  
+            <input type="text" id="userid" value="" name="userid" placeholder="아이디"> <!--라벨을 클릭하면 입력할 수 있게됨-->
+        </div>
+        <div>
+           <label for="userpass">비밀번호</label> 
+           <input type="password" id="userpass" name="userpass" placeholder="비밀번호"> <!--password쓰면 입력 값 숨겨짐-->
+        </div> 
+        <!--
+            1.button 
+            2.reset (새로고침)
+            3.submit (다음 명령어로 전송)
+        -->
+        <input type="button" value="버튼">
+        <button type="reset">리셋버튼</button>   <!--위에name으로 변수를 만들어줘야함-->
+        <button type="submit">전송버튼</button>  <!--위에name으로 변수를 만들어줘야함-->
+    </form>
+    </body>
+    </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    </head>
+    <body>
+        <form action="registerok.html" method="post"> <!--컴퓨터로 보낼 때 post-->
+            <fieldset>
+                <legend>개인정보등록</legend>
+                <label for="uid">아이디 :</label>
+                <input type="text" name="uid" id="uid" placeholder="아이디"> 
+                <br>
+                <label for="upass">비밀번호 :</label>
+                <input type="text" name="upass" id="upass" placeholder="비밀번호">
+                <br>
+                <label for="upass">비밀번호 :</label>
+                <input type="text" name="reupass" id="reupass" placeholder="비밀번호확인">
+                <br>
+                <label>전화번호</label>
+                <select name="tel01">
+                    <option value="010">010</option>
+                    <option value="02">02</option>
+                    <option value="031">031</option>
+                    <option value="032">032</option>
+                </select>   
+                -
+                <input type="text" name="tel02" />
+                -    
+                <input type="text" name="tel03" />
+            </fieldset>
+            <fieldset>
+                <legend>주소등록</legend>
+                <input type="text" name="zipcod">
+                <button type="button">주소검색</button>
+                <br>
+                <input type="text" name="address01">
+                <br>
+                <input type="text" name="address02" placeholder="상세주소" />
+            </fieldset>
+            <fieldset>
+                <legend>추가정보(선택)</legend>
+                <label>성별</label>
+                <label><input type="radio" name="gen" value="남">남자</label>
+                <label><input type="radio" name="gen" value="여">여자</label>
+                <br>
+                <label>취미</label>
+                <label><input type="checkbox" name="hobby01" value="축구">축구</label>
+                <!-- <label for="hobby01"><input type="checkbox" name="hobby01" id="hobby01" value="축구">축구 id로 받아서 하는법 -->
+                <label><input type="checkbox" name="hobby02" value="농구">농구</label>
+                <br>
+                <label>사진첨부</label>
+                <input type="file" name="photo">
+                <br>
+                <br>
+                
+                <label>하고싶은말</label>
+                <textarea cols="11" rows="3"></textarea>
+            </fieldset>
+            <button type="reset">취소</btton>
+            <button type="submit">전송</button>
+
+        </form>
+        
+    </body>
+    </html>

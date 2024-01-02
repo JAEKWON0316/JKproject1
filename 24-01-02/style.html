@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+        .blue {
+            color:blue;
+        }
+        .red {
+            color:red;
+        }
+
+</style>
+    </head>
+     
+    <body>
+        <!--
+        <p class="blue">텍스트</p>
+        <p class="red">텍스트</p>
+       -->
+
+       
+       <!--</p>를 써줄 필요가없다-->
+        <script>
+            let i= 1; 
+
+        while(i<=20) {
+            if(i % 2 == 1) {
+            document.write("<p class='blue'>" + i); 
+           
+            }
+        else{
+            document.write("<p class='red'>" + i);
+           
+        }
+        i++;
+    }
+
+    
+
+    </script>
+    
+    </body>
+    </html>

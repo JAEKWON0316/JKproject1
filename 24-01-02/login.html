@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="userid">아이디</label>  
+                <input type="text" id="userid" value="" name="userid" placeholder="아이디"> 
+            </div>
+            <div>
+               <label for="userpass">비밀번호</label> 
+               <input type="password" id="userpass" name="userpass" placeholder="비밀번호"> 
+            </div>
+            <div>
+                <label for="userpass">비밀번호확인</label> 
+                <input type="password" id="usercheck" name="usercheck" placeholder="비밀번호확인"> 
+             </div> 
+             
+             <div>
+                <label for="number">전화번호</label>
+                <select name="number" id="number">
+                    <option value="02">02</option>
+                    <option value="02">031</option>
+                    <option value="02">032</option>
+                    <option value="02" selected >010</option>
+                </select>
+             </div>
+            </form>
+            
+             <form action="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=우편번호" method="get">
+                <input type="text" name="query" placeholder="우편번호">
+                <button type="submit">주소검색</button>
+             </form>
+            
+            <form>
+            <div>
+                <label for="adrress">주소</label>  <!--라벨을 해줘서 텍스트를 클릭해도 써질 -->
+                <input type="text" id="adress" name="adress"  placeholder="주소"> 
+            </div>
+            <div>
+               <label for="adrress2">상세주소</label> 
+               <input type="text" id="adress2" name="adress2" placeholder="상세주소"> 
+            </div> 
+            <div>
+                성별은? <br> 
+                <label><input type="radio" name="a" value="남"> 남 </label><br>
+                <label><input type="radio" name="a" value="여"> 여 </label> 
+            </div>
+            <div>
+                취미는? <br>
+                <label><input type="checkbox" name="a" value="운동">운동</label><br>
+                <label><input type="checkbox" name="b" value="독서">독서</label><br>
+                <label><input type="checkbox" name="c" value="게임">게임</label><br>
+                <label><input type="checkbox" name="d" value="공부">공부</label><br>
+            </div>
+            <div>
+                <input type="file" name="file">
+            </div>
+            <div>
+                <textarea name="contents" cols="20" rows="10"></textarea>
+            </div>
+        
+        </form>
+
+
+       
+        
+    </body>
+    </html>
