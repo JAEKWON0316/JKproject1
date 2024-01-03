@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <link rel="stylesheet" href="css/style.css">   <!--css를 외부링크로(웹 표준) 총 3가지가 있다.-->
+    <style>
+      /* 스타일 시트(CSS) 공간 */
+
+      #par{  /* 기본 -> class(호출법 .점) -> id(호출법 #샵) 순으로 강력하고 id는 딱 1번밖에 호출못함*/
+        color:red;
+       }
+      .par{
+        color:green;
+      }
+      
+      p{                  /*내부링크로 걸때*/
+        color:blue; 
+      }
+     p.par{
+        color:blue; /*더 강력하게 */
+     }
+    </style>
+    </head>
+    <body>
+        
+        <p class="par" id="par">스타일시트</p> <!--빨간색-->
+        <p>스타일시트</p>  <!--파랑색-->
+        <p>스타일시트</p>  <!--파랑색-->
+        <h1 class="par">스타일시트</h1> <!--초록색-->
+        <h2 class="par">스타일시트</h2> <!--초록색-->
+       <!--<p style="color:green">스타일시트</p>-->  <!--직접 내용 안에(인라인) 걸 때-->
+        <script src="js/script.js"></script> <!--JS를 외부링크로(웹 표준)-->
+        
+    <script>
+     /* 자바스크립트 공간 */
+    </script>
+
+    </body>
+    </html>

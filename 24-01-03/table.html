@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    </head>
+    <body>
+       <!--
+        table ==> 표를 만들 때 처음에 선언한다.
+        tr (table row) => 행
+        td (table data) => 행의 내용(셀)
+        th (table heading) => 열의 젬족 셀
+        caption : 테이블(표)의 제목
+        thead : 머리글 그룹
+        tbody : 본문 그룹
+        tfoot : 꼬리글 그룹
+        colgroup > col(스스로 닫는 태그) : 테이블 각 셀의 크기, 스타일을 지정할 때 사용
+        colspan : 가로셀 병합
+        rowspan : 세로셀 병합
+       -->
+       
+       
+        <table border="1" width="400"> <!--tr(세로), td(가로)로 이루어져 있다. 배열이라고 생각-->
+            <caption>우리멤버</caption> <!--테이블 제목-->
+            <colgroup>
+               <col width="110">
+               <col>
+               <col width="90">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>이름</th>  <!--th를 쓰면 제목 bold체로 출력-->
+                <th colspan="2">나이,사는곳</th>
+                <!--<th>사는곳</th>-->
+            </tr>
+             </thead>
+             <tbody>
+            <tr>
+                <td rowspan="2">홍길동,홍길자</td>
+                <td>20세</td>
+                <td>장기동</td>
+            </tr>
+            <tr>
+                <!-- <td>홍길자</td> -->
+                <td>25세</td>
+                <td>풍무동</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+      
+
+    </body>
+    </html>
