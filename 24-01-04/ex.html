@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        
+        table{
+            border: 1px;
+            width: 300px;
+            border-collapse: collapse;
+        }
+        table,td{
+            border:1px solid;
+        } 
+        
+        .blue{
+            color:blue;
+        }
+        .red{
+            color:red;
+        }
+        .black{
+            color:black;
+        }
+            
+    </style>
+</head>
+
+<body>
+    <script>
+        //테이블 만드는법
+     let tb ="테이블"; //테이블 제목
+   let m = 1;
+   for(let i=0; i < 4; i++){ //0,1,2,3 4개
+     tb += "<tr>"; //<tr>  
+     for(let n=0; n <3; n++){
+         tb+= "<td>"+m+"</td>";
+         m++;
+     }
+     tb += "</tr>";
+ }
+ document.write("<table>"+tb+"</table>");
+        /*
+         for(let i = 1; i <= 100; i++){
+             if(i % 5 == 0 && i % 7 != 0){
+                 document.write("<p class='red'>"+i+"</p>")
+             }else if (i % 5 != 0 && i % 7 == 0){
+                 document.write("<p class='blue'>"+i+"</p>")
+             }else if (i % 5 ==0 && i % 7 == 0){
+                 document.write("<p class='black'>"+i+"</p>")
+             }
+            
+         }
+         let n = 0;
+         for(let i = 1;i<=1000;i++){
+             n = n + i
+             console.log(i);
+         }
+         */
+        /*
+         for(let m = 2; m <= 9; m++){
+    for(let n = 1; n <= 9; n++){
+        //console.log(`${m}x${n}=${m*n}`);
+        
+        //console.log(m+"x"+n+"="+m*n);
+        document.write(m + "x" + n + "="+ n*m +" ");
+       
+        
+    }
+    document.write("<br>");
+}
+*/
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+.a {
+    
+    border: 5px solid #000;
+
+}
+
+.b{
+    background-color: rgb(115, 231, 115);
+    border-radius:0px 10px 0px 10px;
+    border:2px dashed blue;
+}
+
+.c{ 
+    
+    border-style:solid;
+    border-color:green yellow red violet;
+}
+
+.d{
+    border-style:solid;
+    border-color:blue red;
+    border-width:10px 5px;
+}
