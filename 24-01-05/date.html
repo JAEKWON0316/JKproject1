@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      .box{
+        text-align:center;
+      }
+      p span{
+        color:blue;
+        font-weight: bold;
+      }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1>오늘 날짜 정보</h1>
+            <span id="year"></span> 년
+            <span id="month"></span> 월
+            <span id="day"></span> 일
+            <span id="week"></span> 요일
+        </div>
+        <p class="box" id ="gradu"></p>
+        
+        <script>
+        const today = new Date();
+        //문서에 있는 id에 쓰기
+        //document(문서에).getElementById("아이디명").innerHTML = "내용"
+        document.getElementById("year").innerHTML =today.getFullYear(); //문서에 적을 때 쓰는법
+        document.getElementById("month").innerHTML =today.getMonth()+1;
+        document.getElementById("day").innerHTML =today.getDate();
+        document.getElementById("week").innerHTML =getWeek(today.getDay());
+        /*
+        function getWeek(wk){
+            let w;
+            switch(wk){
+                case 0: w="일"; break;
+                case 1: w="월"; break;
+                case 2: w="화"; break;
+                case 3: w="수"; break;
+                case 4: w="목"; break;
+                case 5: w="금"; break;
+                case 6: w="토"; break;
+                
+            }
+            return w;
+        }
+        */
+       function getWeek(wk){  //배열로 요일 구하는법
+        const weeks = ["일", "월", "화", "수", "목", "금", "토"];
+        return weeks[wk];
+
+       }
+        //김환이씨는 1997년 2월 12일 생입니다. 무슨요일에 태어났을까요?
+        const birthDay = new Date(1997,1,12);
+        console.log(birthDay.getDay());
+        
+        //우리가 졸업하는 날은 2024년 6월 7일 0요일 입니다.
+        const graduation = new Date(2024,5,7); //월은 0~11까지
+        const str = `우리가 졸업하는 날은
+                       ${graduation.getFullYear()}년
+                       ${graduation.getMonth()+1}월
+                       ${graduation.getDate()}일
+                       ${getWeek(graduation.getDay())}입니다.`;
+        
+        document.getElementById("gradu").innerHTML = str;
+                
+       /*
+       1초 = 1000(msc)
+       1분 = 1000 * 60; ==> 60000(msc)
+       1시간 = 1000 * 60 * 60; ==> 3,600,000(msc)
+       1일 = 1000 * 60 * 60 * 24; ==> 86,400,400(msc) */
+
+       // document.write(tday.getTime()); //1970년 부터 지금까지 밀리초로 계산
+       const tday = new Date();
+       const gday = new Date(2024, 5, 7);
+       const diffDate = gday.getTime() - tday.getTime();
+       const result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+       document.getElementById("gradu").innerHTML = str + "졸업 까지는" + result + "일 남았습니다."; //span id에 저장해서 가운데에 나오게함
+       document.write(str); //그냥 write 하면 왼쪽부터 나옴
+
+      
+
+
+    </script>
+    </body>
+    </html>

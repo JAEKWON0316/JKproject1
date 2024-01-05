@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+
+    <style>
+     body{
+        text-align:center;
+      }
+    </style>
+    
+    </head>
+
+    <body>
+        <p>그러면 게임을 시작해 보자구!</p>
+        <p id="gogo"></h1>
+        <button onclick="game2()">가위</button>
+        <button onclick="game3()">바위</button>
+        <button onclick="game4()">보</button> 
+
+        <script>
+        const rsp = ["가위", "바위", "보"];
+
+        function game() {
+            const a = Math.floor(Math.random()* 2);
+            document.getElementById("gogo").innerHTML = rsp[a];
+        }
+        function game2(){
+            const b = Math.fllor(Math.random()* 2);
+            document.getElementById("gogo").innerHTML = rsp[b];
+        }
+        function game3(){
+            const c = Math.fllor(Math.random()* 2);
+            document.getElementById("gogo").innerHTML = rsp[c];
+        }
+
+        function game4(){
+            const d = Math.fllor(Math.random()* 2);
+            document.getElementById("gogo").innerHTML = rsp[d];
+        }
+
+
+        </script>
+        
+    </body>
+    </html>

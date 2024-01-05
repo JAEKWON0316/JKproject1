@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game01</title>
+    <style>
+        body{
+            text-align:center;
+        }
+    </style>
+    </head>
+    <body>
+        <p>추첨으로 반장을 뽑는 아주 엄청 민주적인 선거</p>
+        <h1 id="mem"></h1>
+        <button onclick="mem()">뽑기</button> <!--클릭시 이벤트 발생하는 법 onclick=()-->
+       <script>
+        const str = ["철수", "영희", "순이", "민수"];
+        // const str = new Array("철수", "영희", "순이", "민수"); //배열 만드는 2가지 방법
+        //document.write(str[0]);
+        
+        const member = ["김규엽", "김재영", "김환이", "류제욱", 
+                       "박홍준", "안예선", "안효근", "유숭희",
+                        "윤지환", "이재권", "이하윤", "이형길",
+                       "정소진", "조은경", "차민주", "채경철",
+                       "최송이"];
+        //난수 0~16 까지 
+        
+        function mem() {
+            const rs = Math.floor(Math.random() * 16);
+            document.getElementById("mem").innerHTML = member[rs];
+            //alert(member[rs]);
+        }
+       </script>
+    </body>
+    </html>

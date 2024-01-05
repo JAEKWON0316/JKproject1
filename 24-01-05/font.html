@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <style>
+        *{ box-sizing:border-box;}
+        body{
+            margin:20px; /*body 기본값 8px*/
+            color:#000;
+            
+            
+        }
+        .box{
+            width:200px;
+            height:200px;
+            border: 1px solid #fff;
+            margin:20px auto;
+            text-align:center;
+            vertical-align:middle; /*블록사이에선 안됨, 인라인과 인라인 사이에서만 된다.*/
+            /*
+            left,right,center,justify(양쪽 맞춤)
+            */
+        }
+        a{
+            /*text-docoration-line, text-decoration-color, text-decoration-style, text-decoration-thickness*/
+            text-decoration:none; /*밑줄 만드는법 none(없앰), underline(밑줄), overline(윗줄), line-throuth(가운데 줄)*/
+            text-decoration: overline underline;
+        }
+        .p1{
+            width:200px;
+            letter-spacing:-3px;  /*문자와 문자 간격*/
+            line-height:20px; /*줄 사이의 간격*/
+            text-indent:20px; /*처음 들여쓰기 공백*/
+        }
+        .p2{
+            width:200px;
+            word-spacing: 10px; /*단어와 단어 간격*/
+            line-height: 20px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+            <span class="span-box">adfg</span> <!--span은 인라인이여서 정렬 못함-->
+            <p><a href="http://naver.com">네이버로 이동</a></p> <!--<a href=는 링크 거는법-->
+            <p><a href="http://nate.com">네이트로 이동</a></p>
+            
+        </div>
+        <p class="p1">국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</p>
+        <p class="p2">국가는 사회보장·사회복지의 증진에 노력할 의무를 진다. 위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</p>
+    </body>
+    </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sns</title>
+    </head>
+    <style>
+        .container{
+            width:500px;
+            height:100px;
+            border:1px solid #333;
+            /*block을 가운데 정렬법*/
+            margin-left:auto; 
+            margin-right:auto; 
+            text-align:center; /*글씨 정렬*/
+            padding: 40px 20px; /* 위아래 40씩, 오왼 20씩 */
+        }
+        .container span{  /*container 스페이스(안에)있는 스팬 태그 지정*/
+           display:inline-block; /*블록안에 요소를 넣을 때 인라인박스를 해야한다 인라인은 너비가잡히지않기때문에*/
+           width:62px;
+           height:62px;
+           margin:15px 10px;
+           border:1px solid #333;
+           border-radius:50%; /* 원 만드는 법 기울기 50% */
+           
+        }
+        /*하나의 이미지로 여러개를 표헌 background-position 이용*/
+        .box{
+            width:100px;
+            height:100px;
+            padding:50px;
+            border:50px solid red;
+            outline:50px solid green; /*아웃라인은 박스로 잡혀지지않음*/
+            outline-offset:50px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:100px;
+        }
+        .facebook{
+            background:url("image/images.png") no-repeat;
+        }
+        .kakao{
+            background:url("image/images.png") no-repeat -327px -72px;   /*-로 보내는 이유 이미지는 엄청 크고 이미지를 보내는것이기 때문에!!!!*/
+        }
+        .insta{
+            background:url("image/images.png") no-repeat 0px -215px;
+        }
+        .twitter{
+            background:url("image/images.png") no-repeat -327px 0px;
+        }
+        .youtube{
+            background:url("image/images.png") no-repeat -163.5px -215px;
+        }
+        /*
+        .box{
+          width: 100px;
+          height: 100px;
+          border:1px solid #000;
+        }
+        
+        .box2{
+            display:inline-block;  /*강제로 박스를 블럭,인라인,인라인블럭 으로 바꾸는법
+        
+        .box3{
+            margin-top:30px;
+            margin-left:30px;
+            display:block;
+        }
+        */
+    </style>
+    <body>
+        <!--
+        <div class="box box2">block</div>
+        <span class="box box3">inline</span> <!--글자크기만큼만 width height값 적용안됨 inline이라서-->
+        
+        <div class="container">
+            <span class="facebook"></span>
+            <span class="kakao"></span>
+            <span class="insta"></span>
+            <span class="twitter"></span>
+            <span class="youtube"></span>
+        </div>
+        <div class="box"></div>
+        
+        
+    </body>
+    </html>

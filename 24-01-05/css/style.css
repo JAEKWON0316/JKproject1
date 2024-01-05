@@ -1,0 +1,28 @@
+.box{
+    width: 300px;
+    height: 300px;
+    border:1px solid #333;
+    /*background-color:aquamarine;*/
+    /*background-color:rgba(127,255,212,0.2); /*opacity는 전체가투명해짐, rgba는 배경만 투명해짐*/
+    /*opacity:0.2; 투명도 조절*/
+    /*background-image:url("../image/다운로드.png");*/
+    /*background-repeat:no-repeat; /*기본값은 repeat(배경에 꽉차게 반복돼서 이미지나옴)*/
+                                 /*repeat, no-repeat, repeat-x, repeat-y, inherit(부모값을 상속\*/
+   /* background-position: center; /* 위치지정 매개변수 2개(x축,y축)를 쓴다(ex: left top) */ 
+    /*background-attachment: scroll; /*scroll(기본), fixed(전체페이지 중앙 고정), local(스크롤박스안 중앙), inherit*/
+    
+    background:rgba(127,255,212,0.4) url("/24-01-05/image/다운로드.png") no-repeat center scroll; /*한번에 쓰는법*/
+                   /*(색상, 이미지불러오기, 반복유무, 위치조정, 부가장치(스크롤)*/
+
+    background-size:50%; /*백그라운드 이미지  사이즈 조절*/
+    overflow-y:auto; /*넘친 y축을 스크롤해서 볼 수 있게함 scroll, auto, overflow*/  
+                      
+}
+.box2{
+    background-image:url("../image/shoes.png");
+    background-repeat:no-repeat;
+    width: 100px;    
+    height:100px;
+    background-size:100%;
+    
+}

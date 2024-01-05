@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가위바위보</title>
+<style>
+    .container{
+        width:600px;
+        margin:40px auto;
+        text-align:center;
+        
+    }
+    .game{
+        display:inline-block;
+        width:200px;
+        height:200px;
+        margin: 10px 30px;
+        margin: center;
+        
+    }
+    .box{
+        display:inline-block;
+        margin-left:auto; 
+        margin-right:auto;
+        text-align:center;
+        
+        
+    }
+    body{
+        background:rgb(169, 41, 243,0.5);
+    }
+   
+    p {
+        width:700px;
+        height:700px;
+        margin-left:auto;
+        margin-right: auto;
+        
+        background-size:100%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="container">
+        <h3>그러면 게임을 시작해 보자구!</h3>
+        <p id="result">이겼습니다.</p>
+        <div class="game"><strong>나</strong><br><span id="me"><img src="image/가위.jpg"></span></div>
+        <div class="game"><strong>컴퓨터</strong><br><span id="com"><img src="image/보.png"></span></div>
+        
+        <br />
+        <button onclick="game2()">가위</button>
+        <button onclick="game3()">바위</button>
+        <button onclick="game4()">보</button>
+        
+    </div>
+    <p class="box"><img src="image/가위바위보.jpg"></p>
+    
+    <script>
+        const rsp = ["<img src='image/가위.jpg' alt='가위'>", "<img src='image/바위.jpg' alt='바위'>", "<img src='image/보.png' alt='보'>"];
+
+        function game2(){
+            
+            const b = 0;
+            const a = Math.floor(Math.random() * 3);
+            document.getElementById("me").innerHTML = rsp[b];
+            document.getElementById("com").innerHTML = rsp[a];
+            if(a>=1 && a<2){
+                document.getElementById("result").innerHTML="졌습니다";
+            }else if(a < 1){
+                document.getElementById("result").innerHTML="비겼습니다";
+            }
+            else {
+                document.getElementById("result").innerHTML="이겼습니다";
+            }
+        }
+        function game3(){
+            const c = 1;
+            const a = Math.floor(Math.random() * 3);
+            document.getElementById("me").innerHTML = rsp[c];
+            document.getElementById("com").innerHTML = rsp[a];
+        
+        if(a>=2){
+                document.getElementById("result").innerHTML="졌습니다";
+            }else if(a >= 1 && a <2){
+                document.getElementById("result").innerHTML="비겼습니다";
+            }
+            else {
+                document.getElementById("result").innerHTML="이겼습니다";
+            }
+        }
+        function game4(){
+            const d = 2;
+            const a = Math.floor(Math.random() * 3);
+            document.getElementById("me").innerHTML = rsp[d];
+            document.getElementById("com").innerHTML = rsp[a];
+            if(a<1){
+                document.getElementById("result").innerHTML="졌습니다";
+            }else if(a>=1 && a <2){
+                document.getElementById("result").innerHTML="이겼습니다";
+            }
+            else{
+                document.getElementById("result").innerHTML="비겼습니다";
+            }
+        }
+       
+
+        </script>
+</body>
+</html>
