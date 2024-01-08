@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{ box-sizing:border-box;}
+        .container{
+            width:1000px;
+            border:1px solid #333;
+            padding:20px;
+            margin:0 auto;
+             /*float를 해주면 부모한테 clear를 꼭 해줘야한다*/
+            
+        }
+        .container::after{ /*가상요소는 ::2개, 가상요소를 만들어줘서 clear를해줌*/
+        content:"";
+        display:table;
+        clear:both;
+        }
+       
+        .col{
+          width:25%;
+          float:left;
+          padding:15px;
+        }
+        .box1{
+            background:pink;
+            width:100%;
+        height:200px;
+
+        }
+        .box2{
+            background:yellowgreen;
+            width:100%;
+        height:200px;
+
+        }
+        
+        .box3{
+            background:rgb(205, 205, 243);
+            width:100%;
+            height:200px;
+            
+        }
+        .box4{
+            background:rgb(15, 100, 255);
+            width:100%;
+            height:200px;
+            
+        }
+      
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col">
+            <div class="box1">1</div>
+            </div>
+            <div class="col">
+                <div class="box2">2</div>
+            </div>
+            <div class="col">
+            <div class="box3">3</div>
+            </div>
+            <div class="col">
+                <div class="box4">4</div>
+            </div>
+        </div>
+        
+    </body>
+    </html>

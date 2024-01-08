@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!--fontawesome cdn에서 링크복사-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /*구글폰트에서 가져올 수 있음*/
+        @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@200&display=swap');
+
+        body{
+            font-family: 'Noto Sans KR', sans-serif; /*웹 안전서체*/
+            
+           
+            
+        }
+        /*a: => a가상클래스
+        a:link{
+            text-decoration: overline;
+            color: green; /*초기값link 그린*/
+        
+        
+        a:hover{
+             color:#1877f2; /*hover 링크에 커서 올려놨을 때 블루*/
+            text-decoration:underline;
+        }
+        a:visited{ /*visited 접속 기록이 있을 시 빨강*/
+            color:red;
+        }
+        a:active{  /*active 링크에 커서 클릭하고 있을 시 검정*/
+            color:black;
+        }
+        p{   /*
+            font-style: italic;
+            
+            Normal, italic, oblique(기울림꼴)
+            */
+            font-family: 'Nanum Pen Script', cursive;
+            
+        }
+        .b{
+            font-weight: 700; /*
+                               ..light(300),normal(400),bold(700),bolder(800)..
+                               */
+            font-variant:small-caps; /*normal, small-caps(작은 대문자)*/
+        }
+        .wspace{
+            width:300px;
+            border:1px solid #333;
+            padding:30px;
+            white-space:pre-wrap;
+            /*overflow:hidden; 넘친거는 보이지않게*/
+            /*
+            normal
+            nowrap //줄바꿈 금지
+            pre //html의 pre와 같음
+            pre-line //pre와 같지만 줄바꿈이 허용됨, 띄어쓰기는 안됨
+            pre-wrap //pre와 같지만 줄바꿈이 허용됨, 띄어쓰기 됨.
+            inherit(상속)
+            */
+        }
+        .board{
+            width:300px;
+            border:1px solid #333;
+            padding:30px;
+            /*
+            넘치는 부분 안보이게
+            줄바꿈을 허용하지 않게
+            text-overflow:ellipsis;
+             */
+
+             /*3개를 세트로 기억하자*/
+             white-space:nowrap;
+             overflow:hidden;
+             text-overflow:ellipsis; /*넘치는 부분이 ...으로 나옴*/
+        }
+        i.fa-poo{
+            font-size:40px;
+            color:green;
+        }
+        .sns-box {
+            margin: 40px auto; /*마진을 줘서 가운데에 오게*/
+            padding:30px;
+            width:200px;
+            border: 1px solid #ddd;
+            background: #efefef;
+            text-align: center; /*박스 안에 텍스트가 가운데에 오게*/
+            box-shadow: 20px 20px 30px 0 rgba(0,0,0,0.7); /*x축, y축, 뿌려지는정도, 투명도 30프로*/
+        }
+        /*.sns-box:    /*클래스명: => 가상클래스 생성*/
+        .sns-box span{
+            display:inline-block; /*인라인 박스로 박스안에 올 수 있게*/
+            width:35px;
+            height:35px;
+            border:1px solid #0adb0a;
+            text-align:center;
+            font-size:30px;
+            line-height: 32px;
+            border-radius:50%;
+
+        }
+        .facebook i {
+            color:#1877f2;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 1); 
+            /*text-shadow: x축 y축 퍼지는정도 색상 */
+        }
+       .instagram i {
+        color:#c14584;
+       }
+       .wt{
+        
+        font-size:100px;
+        color:#fff;
+        text-shadow: 5px 0 0 #333,
+                    0 5px 0 #333,
+                    -5px 0 0 #333,
+                    0 -5px 0 #333;    /*그림자효과를 여러개를 한번에 줄 수 있다.*/
+       }
+    </style>
+    </head>
+    
+    <body>
+        <div>
+            <a href="https://www.nate.com">네이트 이동</a>
+        </div>
+        <!--폰트의 종류           sans-serif(고딕체)
+            serif(세딕체)
+           monospace(타이핑체,코딩에 이용,가로폭이 같음)
+           cursive(필기체)
+           fantasy(장식글꼴)
+        
+           font-family : "Times New Roman", Times, sans-serif체; 폰트명이 길 때 따옴표로 씌어주면 좋음
+                (폰트는 여러가지 글씨체를 지정->클라이언트안에 무슨 폰트가 있는지 몰라서 몇개를 지정해주는것 )
+           
+            font-style: 이텔릭체 <i>fdfd</i> 
+            구글폰트에 들어가면 사용할 수 있는 폰트체가 많다.-->
+       <h1>Lorm Ipsum dolor sit amet.</h1>
+        <!-- <i>이탤릭체</i> 지금은 사용하지 않음 -->
+        <p>이탤릭체</p>
+        <!--<b>글씨체를 두껍게 하는 방법</b> 지금은 안씀-->
+        <p class="b">Lorm Ipsum dolor sit amet.</p>
+        <strong>글씨체를 두껍게 하는 방법 + 강조</strong>
+        <p class="wspace">
+            시 남으로 창을 내겠소 어쩌구 저쩌구  남으로 창을 내겠소 어쩌구 저쩌구  남으로 창 남으로 창을 내겠소 어쩌구 저쩌구을 내겠소 어쩌구 저쩌구
+            
+        </p>
+        <p class="board">시 남으로 창을 내겠소 어쩌구 저쩌구  남으로 창을 내겠소 어쩌구 저쩌구  남으로 창 남으로 창을 내겠소 어쩌구 저쩌구을 내겠소 어쩌구 저쩌구
+        </p>
+        <i class="fa-solid fa-poo"></i> <!--fontawesome 에서 받아온것-->
+         <div class="sns-box">
+            <span class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </span>
+            <span class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+                </span>
+            
+
+         </div>
+         <i class="fa-brands fa-facebook-f wt"></i>
+         <br><br><br><br><br><br><br>
+    </body>
+    </html>

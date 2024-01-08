@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        a{
+            text-decoration:none;
+            color:black;
+            margin-left:5px;
+            margin-right:5px;
+            padding: 5px 10px;
+        }
+        .b{
+            background-color:red;
+            color:#fff;
+        }
+        .b:hover{
+            background-color:green;
+            color:yellow;
+            box-shadow:-2px -2px 4px rgba(0,0,0,0.3); /*-주면 뒤쪽으로 그림자생김*/
+        }
+        .c{
+            border: 1px solid green;
+        }
+        .c:hover{
+         background-color: green;
+         color:#fff;
+        }
+        .d:hover{
+            background-color: black;
+            text-decoration:underline;
+            color:hotpink;
+         }
+         .nav{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            border:1px solid #333;
+            width:500px;
+            max-width:90%;
+         }
+         .nav>li{
+            display:inline-block;
+         }
+         .subnav{
+             /*display:none;*/ /*아예 사라지게 하는것*/
+            visibility:hidden; /*그냥 투명하게 공간을 차지함*/
+            position:absolute;
+            z-index:100;
+            width:50px;
+            top:30px;
+            left:-20px;
+         }
+         .a{
+            position:relative;
+         }
+         .a:hover .subnav{  /*+가 들어가면 동급(형제)클래스, none으로 사라지게 한다음 hover로 커서 오면 보이게함*/
+            /*display:block;*/
+            visibility: visible;
+           
+         }
+         
+         /*table, th, td {   테이블과 테이블 안쪽 border가 2개 들어감
+        border: 1px solid;
+          }
+          table {
+        border-collapse: collapse;
+        }   바깥과 안쪽의 border은 1개로 만들어줌
+        */
+        
+          
+    </style>
+    </head>
+    <body>
+        <!--
+        <a href="#" class="a">링크1</a>
+        <a href="#" class="b">링크2</a>
+        <a href="#" class="c">링크3</a>
+        <a href="#" class="d">링크4</a>
+        -->
+        <ul class="nav">
+            <li class="a">
+               <a href="#">메뉴1</a>
+           </li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li class="a"><a href="#">메뉴4</a>
+               <ul class="subnav">
+                   <li><a href="#">서브1</a></li>
+                   <li><a href="#">서브2</a></li>
+                   <li><a href="#">서브3</a></li>
+                   <li><a href="#">서브4</a></li>
+                   <li><a href="#">서브5</a></li>
+               </ul> 
+           </li>
+         </ul>
+       
+        <!--
+        <table>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Griffin</td>
+            </tr>
+            <tr>
+              <td>Lois</td>
+              <td>Griffin</td>
+            </tr>
+          </table>
+          -->
+    </body>
+    </html>
