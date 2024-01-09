@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+    .bigbox{
+        width:800px;
+        height:800px;
+        overflow:hidden;
+    }
+    .bigbox img{
+        width:100%;
+    }
+    .sbox{
+        width:800px;
+        height:160px;
+        overflow:hidden;
+    }
+    .sbox img{
+        width:160px;
+        float:left;
+    }
+    #popup{
+        width:400px;
+        height:300px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+        background-color: #efefef;
+        position:fixed;
+        top: 200px;
+        left: calc(50% - 200px);
+        text-align:center;
+        z-index:100;
+        display:none;
+    }
+   
+</style>
+</head>
+<body>
+ <div class="bigbox">
+    <img src="images/wedding01.jpg" alt="01" id="bigbox" />
+ </div>
+ <div class="sbox">
+    <img src="images/wedding01.jpg"  alt="01" onclick="viewImg('wedding01')">
+    <img src="images/wedding04.jpg" alt="04" onclick="viewImg('wedding04')"/>
+    <img src="images/wedding05.jpg" alt="05" onclick="viewImg('wedding05')"/>
+    <img src="images/wedding06.jpg" alt="06" onclick="viewImg('wedding06')"/>
+    <img src="images/wedding03.jpg" alt="07" onclick="viewImg('wedding03')"/>
+    <img src="images/wedding02.jpg" alt="07" onclick="viewImg('wedding02')"/>
+ </div>
+ <button id="vpopup" onClick="viewPopup();">팝업창 보이기</button> <!--클릭 시 함수호출-->
+ <div id="popup">
+    <h1>팝업창 입니다.</h1>
+    <button id="close" onClick="hidePopup()">닫기</button>
+ </div>
+ <script>
+
+    function viewImg(str) {
+        document.getElementById('bigbox').src='images/'+str+'.jpg';
+    }
+    function viewPopup() {
+       document.getElementById("popup").style.display="block"; /*블록처리로 해서 보이게 하는 함수*/
+    }
+    function hidePopup() {
+        document.getElementById("popup").style.display="none";
+    }
+
+ </script>
+</body>
+</html>

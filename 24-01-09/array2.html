@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    </head>
+    <body>
+      <script>
+    
+      let greenAir = ["교대","방배","강남"];
+      let yellowAir = ["미금", "정자", "수서"];
+
+      greenAir.splice(2, 1, "서초", "역삼"); /* 2번째 자리부터 1개를 빼고 "서초", "역삼" 삽입 */
+      console.log(greenAir);
+
+      let rs = yellowAir.pop();
+      console.log(yellowAir); /*빼고 남은 배열*/
+      console.log(rs); /*배열에서 빼낸것 */
+      
+      let a = yellowAir.shift();
+      console.log(yellowAir);
+      console.log(a);
+
+      yellowAir.unshift("고속터미널"); /*가장 앞 인덱스에 추가*/
+      console.log(yellowAir);
+
+      rs = greenAir.length;
+      console.log(rs); /*greenAir의 배열길이 총 4개 */a
+      
+      for(let i = 0; i < greenAir.length; i++){ /*greenAir의 배열길이 0~3까지 총 4번 */
+        console.log("그것은 " + greenAir[i] + "입니다");
+      }
+
+
+
+      </script>
+    </body>
+    </html>
