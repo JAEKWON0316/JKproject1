@@ -32,23 +32,23 @@ body{
     margin-right:-15px;  /*padding을 줄것이니 부모박스에 마진을 줘 먼저 크게 만든다(패딩만큼 빼줘야하기 때문에 먼저 늘려줌)*/
 }
 .clearfix::after,
-.row::after{
+.row::after{           /*float 한 부분에 가상요소 :: 를 만들어줘서 clear:both로 만들어줘야함 가상요소는(after,before 2가지) */
     content:"";
     display:table;
     clear:both;
 }
 
-.container>div{
+.hero .container>div{
     margin-top:30px;
     border:1px solid #fff;
 }
-.container>.hero-left{
+.hero .container>.hero-left{
    float:left; 
    width:40%;
    height:125px;
    border-right:none;
 }
-.container>.hero-logo{
+.hero .container>.hero-logo{
    float:left;
    width:20%;
    height:125px;
@@ -59,7 +59,7 @@ body{
 .hero-logo h1{
     margin:0;
     padding-top:20px;
-    font-family: 'La Belle Aurore', cursive;
+    font-family: 'La Belle Aurore',cursive;
 }
 .hero-logo p{
     text-transform: uppercase;
@@ -68,7 +68,7 @@ body{
     padding-top:8px;
     letter-spacing:1px;
 }
-.container>.hero-right{
+.hero .container>.hero-right{
   float:left;  
   width:40%;
   height:125px;
@@ -103,8 +103,8 @@ nav.container a{
     width:300px;
 }
 .container>.flbox{
-    background:url("/images/flower2.jpg") no-repeat center;
-    background-size:contain;
+    background:url("/images/flower3.jpg") no-repeat center;
+    background-size:cover;
     width:230px;
     height:120px;
     margin:100px auto 20px;
@@ -165,8 +165,7 @@ h2.subtitle{
     
     font-size:30px;
 }
-.box2:hover>.text-box,     /*> 자식: 자손들도 다 포함
-                              스페이스바( ) : 자손 */
+.box2:hover>.text-box,     /*> 자식: 자손들도 다 포함 스페이스바( ) : 자손 */
 .box1:hover>.text-box{
     display:block;
 }
@@ -192,17 +191,132 @@ h2.subtitle{
 .btn:hover{
     background:rgb(109,172,124);
 }
+
+/*** section whoami ***/
+section.whoami{
+    background-color:rgb(237, 242, 239);
+    padding-top:50px;
+   
+}
+.leftbox{
+    width:60%;
+    float:left;
+    position:relative;
+}
+.leftbox img{
+    position:absolute;
+}
+img.aboutme {
+    top:25px;
+}
+img.aboutme2 {
+    top: 280px;
+    right:60px;
+    border:15px solid rgb(237, 242, 239);
+    z-index:2;
+}
+.rightbox{
+    width:40%;
+    float:right;
+}
+.rightbox h1{
+    font-size:36px;
+    line-height:1.5; /*행간 간격*/
+}
+.rightbox p{
+    line-height:1.6;
+}
+.whoami .btn{
+    margin-left:0;  /*더 강한 class를줘서 이거를 하게함 왼쪽으로 치우치게 기본은 중앙*/
+}
+
+/****** packages *******/
+/** 반응형 정사각형 만드는 공식 **/
+.package-box{
+    width:100%;
+    position:relative;
+} 
+.package-box::after {
+    content:"";
+    display:block;
+    padding-bottom: 100%;
+}
+.inner{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.innder img{
+    width:100%;
+    height:auto;
+}
+.packages h1{
+    font-size:25px;
+}
+.dallar {
+    font-size:25px;
+}
+.btn2{
+    display:block;
+    width:480px;
+    height:50px;
+    text-align:center;
+    color:#fff;
+    text-transform: uppercase;
+    background:rgb(138,207,154);
+    border-radius:5px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+    line-height:50px; /*글씨 가운데 정렬*/
+    margin:0px auto 100px;
+    cursor:pointer; /*영역에 오면 커서생김*/
+    text-decoration:none;   
+}
 .hero2{
-    
-    width:1;
-    height:700px;
-    background:rgb(237,242, 239) no-repeat center;
+    width:100%;
+    height:500px;
+    background:url("/images/hands.jpg") no-repeat center;
     background-size:cover;
     margin-top:120px;
 }
+.title2{
+    font-family: 'Unna', serif;
+    font-weight: 700; 
+    color:#fff;
+    text-align:center;
+    font-size: 35px;
+    margin-top:330px;
+}
 .container2{
-   
+    width:1200px;
     margin-left:auto;
     margin-right:auto;
-  
+}
+div.container2{
+    padding-top:30px;
+    text-align:center;
+
+}
+.people{
+    width:100%;
+    margin-top:100px;
+}
+.col2{
+    width:33.33334%;
+    padding-left:15px;
+    padding-right:15px;   /*부모박스에 margin 값 똑같이 채워주기 */
+    float:left;
+    z-index:9;
+}
+.font-box{
+    background-color:rgb(237, 242, 239);
+    border:1px solid rgb(237, 242, 239);
+    width:50%;
+    height:300px;
+    float:right;
+    z-index:10;
+    margin-top:160px;
+    
 }

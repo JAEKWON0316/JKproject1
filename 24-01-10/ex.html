@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    </head>
+    <body>
+        <div class="box">
+            <h1>오늘 날짜 정보</h1>
+            <span id="year"></span> 
+            <span id="month"></span> 
+            <span id="day"></span> 
+            <span id="week"></span> 
+        </div>
+      <script>
+        /*1. 현재 날짜와 시간을 아래 형식에 맞게 javascript로 출력하라.*/
+        const today = new Date(); /*오늘 날짜 데이터 객체 생성*/
+        document.getElementById("year").innerHTML =today.getFullYear(); //문서에 적을 때 쓰는법
+        document.getElementById("month").innerHTML =today.getMonth()+1;
+        document.getElementById("day").innerHTML =today.getDate();
+        document.getElementById("week").innerHTML =getWeek(today.getDay());
+
+        function getWeek(wk){
+            const weeks = ["일","월","화","수","목","금","토"];
+            return weeks[wk];
+        }
+        document.write("오늘은 "+today.getFullYear()+"년 "+today.getMonth()+1+"월"+today.getDate()+"일 "+getWeek(today.getDay())+"입니다."+"<br>");
+        let a = today.getHours();
+        if(a >= 12){
+           a = "오후";
+        }
+          else{
+            a = "오전";
+          }
+        
+        document.write("지금 시간은 " + a + today.getHours()+"시 "+ today.getMinutes()+"분 입니다");
+        
+        let arr_1 = [today.getFullYear(), today.getMonth()+1,today.getDate()]
+        let t = arr_1.join("-");
+        console.log(t);
+        document.write("<br>"+t);
+        let t2 = arr_1.join("/")
+        console.log(t2);
+        document.write("<br>"+t2);
+
+        let year = prompt("년도를 입력하세요.", 2024);
+
+      </script>
+    </body>
+    </html>
