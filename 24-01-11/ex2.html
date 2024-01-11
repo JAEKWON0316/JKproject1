@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>클래스 태그연습</title>
+    <style>
+        ol{
+            width:150px;
+        }
+        li:hover{
+            background-color: yellowgreen;
+        }
+        /*
+        .f{
+            background: #efefef;
+        } */
+        
+        li:first-child, /*가상 클래스 li중에 첫번 째 자식*/
+        li:last-child{  /* li중 마지막 자식*/
+            background: #dddddd;
+        }
+        li:nth-child(3){ /*자식들중에 고름 odd(홀수자식),even(짝수자식)*/
+            background:#dddddd;
+        }
+        
+        /**
+        :nth-child(순서) n번째(nth)
+        순서에 odd, even으로 홀짝을 쓸 수 있음
+        또 2n, 2n-1로 써도 됨
+        */
+
+    </style>
+</head>
+<body>
+    <ol>
+        <li class="f">1번째</li>
+        <li>2번째</li>
+        <li>3번째</li>
+        <li>4번째</li>
+        <li>5번째</li>
+    </ol>
+</body>
+</html>

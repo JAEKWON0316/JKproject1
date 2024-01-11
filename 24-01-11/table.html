@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판테이블연습</title>
+    <style>
+        table{
+        margin:30px auto;
+        width:600px;
+        border-collapse: collapse;  /*table, th, td에 border를 주고 겹겹이 돼있는 보더를 합쳐라*/
+    }
+    table, th, td{
+        border:1px solid #333;
+    }
+    th {
+        height:80px;
+        text-align:right;
+        vertical-align:bottom; /*인라인-인라인 사이 세로 정렬 , 가로정렬(text-align)*/
+    }
+    tbody tr:hover{
+        background:#ddd;
+    }
+    </style>
+</head>
+<body>
+    <colgroup>
+        <col width="5%"> <!--테이블의 비율 정해줌-->
+        <col>
+        <col width="15%">
+        <col width="10%">
+        <col width="10%">
+    </colgroup>
+    <table>
+        <caption>나의 게시판</caption> <!--테이블 제목-->
+    <thead> <!--테이블제목(제목에는 굵은글씨 가운데 정렬됨)-->
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>글쓴이</th>
+            <th>날짜</th>
+            <th>조회수</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>제목입니다.</td>
+            <td>안철수</td>
+            <td>2024.01.11</td>
+            <td>1</td>
+        </tr> <tr>
+            <td>1</td>
+            <td>제목입니다.제목입니다.제목입니다.제목입니다.제목입니다.제목입니다.제목입니다.</td>
+            <td>안철수</td>
+            <td>2024.01.11</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

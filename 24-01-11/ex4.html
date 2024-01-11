@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div.img{
+            float:left;
+            width:200px;
+            margin:10px;
+        }
+        .img:nth-child(1){  /*img클래스의 1번째 자식*/
+           opacity:0.3;
+        }
+        .img:nth-child(2){ /*img클래스의 2번째 자식*/
+           opacity:0.6;
+        }
+        .img:nth-child(3){ /*img클래스의 3번째 자식*/
+           opacity:0.9;
+        }
+        .img:hover{
+            opacity:1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+       <div class="img">  <!--로렌 픽숨에서 이미지를 가져올 수 있다.-->
+        <img src="https://picsum.photos/id/200/200/180" alt="#" />
+        </div>
+       <div class="img">
+       <img src="https://picsum.photos/id/250/200/180" alt="#" />
+        </div>
+       <div class="img">
+       <img src="https://picsum.photos/id/350/200/180" alt="#" />
+       </div>
+    </div>
+    
+</body>
+</html>

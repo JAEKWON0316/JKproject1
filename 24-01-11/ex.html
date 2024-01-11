@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title></title>
+    <style>
+       /* div p{ /*( )스페이스바 = div 안에 속해있는 자손들
+          background-color:yellowgreen;
+        }*/
+        /*div + p{  /*+란 = div에 이웃한 p태그
+            background-color: yellowgreen;
+        }*/
+        /*
+        div ~ p{
+            background-color: yellowgreen;
+        }
+        */
+        /*div > p {   >는 = 자식 태그로 바로 하위 태그만 잡힘 자손X 자식
+            background-color: yellowgreen;
+        }*/
+        div,p{  /*그룹 선택자 다른두곳에서 모두 쓰고싶을 때*/
+            background-color: yellowgreen;
+        }
+        /* 이렇게 2개 쓰면 class가 더 여러개 들어가 a.b.c.d가 쎄다*/
+        div.a.b.c.d{
+            color:red;
+        }
+        div.a.b.c{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+ <h2>셀렉트</h2>
+ <div class="a b c d">
+    <div>
+        <section><p>문단태그 1</p></section>
+    </div>
+    <p>문단태그 2</p>
+    <p>문단태그 3</p>
+ </div>
+ <p>문단태그 4</p>
+</body>
+</html>

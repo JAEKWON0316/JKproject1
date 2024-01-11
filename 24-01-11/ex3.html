@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+     <style>
+        /*
+        div p:first-child{  /*div의 첫번째 자식은 div라서 p로 주면 안나옴 (자식만 따짐)            color:red;
+        
+        }
+        */
+        div p:first-of-type{ /*div 자식들중 타입이 첫번 째 p인것 */
+            color:red;
+        }
+        
+        /*
+        div p:nth-child(2){
+            color:red;
+        }
+        */
+     </style>
+</head>
+<body>
+    <div>
+        <div>첫 번째박스는 div</div>
+        <p>두 번째 박스는 p</p>
+        <p>세 번째 박스도 p</p>
+    </div>
+</body>
+</html>
