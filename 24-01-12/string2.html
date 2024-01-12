@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        /*
+          1. 영문 이름을 입력받아 이름을 대문자로 변환
+          2. 전화번호를 입력받은 후 마지막 4자리 수는 ****로 변환하라.
+             -예) 010-0000-****, 0100000****, ...
+            1) 끝의 네자리수를 잘라내고 그곳에 ****를 넣어준다.
+               전화번호.substring(0, 전화번호.length-4) + ****; 뒤에 4개 짤리고 뽑힘
+               substr substring length
+        */
+       let name = prompt("영문 이름을 입력하세요.");
+       let address = prompt("전화번호를 입력하세요.");
+       let ad = address.substring(0, address.length - 4) + "****";
+
+       document.write(name.toUpperCase(),"님 반갑슴돠!!!!!!<br>");
+       document.write(ad);
+    </script>
+</body>
+</html>
