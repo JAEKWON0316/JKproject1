@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+    .container{
+        width:600px;
+        padding: 40px;
+        box-sizing:border-box;
+        background:#efefef;
+        margin:40px auto;
+        box-shadow:0 0 15px 0 rgba(0,0,0,0.2);
+        border-radius:10px;
+    }
+    h1{
+        margin-top:30px;
+        margin-bottom:15px;
+        text-align:center;
+    }
+    label{
+        display:inline-block;
+        width:70px;
+        padding-right:15px;
+        text-align:right;
+    }
+    ul{
+        list-style-type:none;
+    }
+    li{
+        line-height:40px;
+    }
+    input[type=text],input[type=password]{
+        width:60%;
+        padding:5px;
+        border-radius:5px;
+    }
+    input:focus{ /*가상클래스 input을 누르면 이벤트 발생*/
+        background-color:yellowgreen;
+    }
+    .text-center{
+       text-align:center;
+       margin-top:10px;
+    }
+    button{
+        padding:5px 10px;
+        font-size:18px;
+    }
+</style>
+</head>
+<body>
+  <h1>회원가입</h1>
+  <div class="container">
+      <form name="registerform" action="ex2.html" method="post" onsubmit="return test()">  <!--함수에서 return false를 하고 return test()를 해주면 공백시 반복-->
+          <ul>
+              <li>
+                 <label>이름</label>
+                 <input type="text" name="username">
+              </li>
+              <li>
+                <label>비밀번호</label>
+                <input type="password" name="userpass">
+             </li>
+             <li>
+                <label>이메일</label> 
+                <input type="text" name="useremail">
+             </li>
+             <li class="text-center">
+                 <button type="submit"> 전 송 </button>
+             </li>
+          </ul>
+      </form>
+  </div>
+<script>
+    function test(){
+        let check1 = false;
+        let check2 = false;
+        const form = document.registerform;
+        if(form.username.value == ""){
+            alert("이름을 입력하세요.");
+            form.username.focus();
+            return false;
+        }
+        if(form.userpass.value == ""){
+            alert("비밀번호를 입력하세요.");
+            form.userpass.focus();
+            return false;
+        }
+        const uemail = form.useremail.value;
+        if(uemail == ""){
+            alert("이메일 주소를 입력하세요.");
+            form.useremail.focus();
+            return false;
+        }
+        const arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr", ".org"];
+        /*
+        1. @표시가 나오지 않으면 에러
+        2. arrUrl의 주소중 하나가 나오지 않으면 에러
+        */
+       if(uemail.indexOf("@") > 0 ){   /*@부터 시작하면 이메일이 아니니까*/
+           check1 = true;
+       }
+           for(let i = 0; i < arrUrl.length; i++){
+            if(uemail.indexOf(arrUrl[i]) > 0){
+                check2 = true;
+            }
+           }
+       
+       if(!(check1 && check2)){
+       
+        alert("이메일 주소를 확인하세요.");
+        form.useremail.focus();
+        return false;
+       }
+       //성공 form.submit
+    }
+</script>
+</body>
+</html>

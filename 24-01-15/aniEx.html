@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!--font awesome cdn에서 링크 복사-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin:0;
+        }
+        .icon-bar{
+            width:90px;
+            background-color:#555;
+            margin-top:20px;
+        }
+        .icon-bar a{
+            display:block;  /*세로 정렬을 위한 block*/
+            text-align:center;
+            padding:16px;
+            color:#fff;
+            font-size:35px;
+            transition: all 0.3s ease; /*부드럽게 주기 위함*/
+        }
+        .active{
+            background-color:#04aa6d;
+        }
+        .icon-bar a:hover{
+            background:#000;
+        }
+        .icon-bar2{
+            width:100%;
+            background-color:#555;
+            margin:0;
+           
+        }
+       
+        .icon-bar2 a:hover{
+            background:#000;
+        }
+        .icon-bar2 a{
+            
+            width:20%;
+            float:left;
+            text-align:center;
+            
+            
+            color:#fff;
+            font-size:35px;
+            transition: all 0.3s ease;
+          
+        }
+        .icon-bar2::after{
+            content:"";
+            display:table;
+            clear:both;
+         
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="icon-bar2">
+        
+        <a href="#" class="active"><i class="fa fa-home"></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> 
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+        <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+        
+       </div>
+      
+
+
+   <div class="icon-bar">
+    <a href="#" class="active"><i class="fa fa-home"></i></a>
+    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a> 
+    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    <a href="#"><i class="fa-solid fa-earth-asia"></i></a>
+    <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+   </div>
+</html>

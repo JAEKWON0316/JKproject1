@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1 id="nowtime"></h1>
+    <Script>
+        /*nowTimer(); 함수의 호이스팅 때문에 스크립트 안에 어디에 쓰든 상관없다*/
+        setInterval(nowTimer, 1000 ) /*함수이름, 간격(1000=1초)*/
+        function nowTimer(){
+            const d = new Date();
+            document.getElementById("nowtime").innerHTML = d.toLocaleTimeString(); 
+        }
+    </Script>
+</body>
+</html>

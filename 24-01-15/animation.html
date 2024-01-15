@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background:yellow;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation-name: newani;
+            animation-duration: 5s;
+            animation-direction:reverse;
+            animation-iteration-count:infinite;
+     }
+     @keyframes newani {   /*애니메이션 이름 설정 및 세팅(from부터 to까지) */
+        /*       
+        from {
+            background:yellow;
+        }
+        to {
+            background:blue;
+            top:300px;
+            left:300px;
+        }
+        */
+        /*퍼센테이지로 나눠서 할 수도 있음*/
+        0% {
+            background:yellow;
+            top:0;
+            left:0;
+        }
+        25% {
+            background:blue;
+            left:300px;
+            top:0;
+        }
+        50%{ 
+           background:red;
+           top:300px;
+           left:300px;
+        }
+        75%{
+            background:green;
+            left:0px;
+            top:300px;
+        }
+        100%{
+           background:yellow;
+           top: 0px;
+           
+        }
+    }
+     /*
+      animation-name: 애니메이션의 이름을 지정한다. @keyframes를 이용
+      animation-duration: 애니메이션의 신간을 설정한다.
+      animation-delay: 애니메이션이 시작되는 시간을 설정한다.
+      animation-timing-function: 애니메이션 전환 함수를 이용하여 애니메이션을 설정
+      animation-direction: 애니메이션이 한 번 종료되고 
+                           처음부터 다시 시작할지 역방향으로 시작할지 결정
+      animation-interation-count: 애니메이션이 몇 번 반복될지 지정. 
+                                  무한으로 지정: infinite
+      
+      animation-fill-mode: 시작전이나 끝나고 난 후 어떤 값이 적용될지.
+     */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

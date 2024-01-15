@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background:red;
+            margin:30px;
+            /*
+            transition-property: transform; /* all, none, inherit , width와, height도 올 수 있다.
+            transition-duration: 0.5s; /*0.5s == 500ms
+            transition-delay: 0.5s;
+            */
+            transition: all 1s; 
+        }
+        .box1{
+            top:100px;
+            /*가운데 정렬하는 2가지 방법*/
+            /* left: calc(50% - 50px);  position을 쓸 때 써준다*/
+            left:50%;
+            transform: translateX(-50%);
+            position:absolute;
+            /*transform: translate(20px, 40px); transform은 action이나 hover들어갈 떄 많이 쓴다.*/
+        }
+        /*
+        div:hover{
+            transform: translate(20px, 40px);
+        }*/
+        .box2:hover{
+            transform: rotate(30deg); /*rotate는 Z축을 주로 쓴다 회전*/
+        }
+        .box3:hover{
+            transform: skewX(30deg); /* 각도*/
+        }
+        .box4:hover{
+            transform:scaleY(1.5); /*배수만큼 크기가 커짐*/
+        }
+        .box5:hover{
+            transform:matrix(1, -0.3, 0, 1.2, 0, 0);
+        }
+        .btn{  /*button generator 찾아보면 많이 나온다*/
+            font-size:18px;
+            padding:5px 25px;
+            box-shadow: 2px 2px 0px 0px #efefef;
+            border-radius:10px;
+            cursor:pointer;
+            background-image:linear-gradient(to bottom, #3bbeee 5%, #0183b3 100%);
+            color: #fff;
+            border:none;
+            font-weight: bold;
+            transition: all 0.3s;
+            
+        }
+        .btn:hover{
+            background-image:linear-gradient(to bottom,#0183b3 5%,  #3bbeee 100%);
+        }
+        .btn:active{ /*버튼을 누를 시 */
+            transform:translate(2px, 2px);
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+   
+     <button type="button" class="btn">나의 버튼</button>
+   
+</body>
+</html>

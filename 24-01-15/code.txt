@@ -1,0 +1,54 @@
+#C언어의 경우
+#include <stuido.h>
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("a + b = #d", a + b);
+}
+
+#파이썬의 경우
+def add():
+     num = int(input("num1:"))
+     num2 = int(input("num2:"))
+     result = num + num2
+     print("두 수의 합은 :" result)
+
+#javascript의 경우
+const num1 = prompt("첫 번째 글자 입력");
+const num2 = prompt("두 번째 글자 입력");
+add(num1, num2);
+function add(num1, num2){
+    let result = num1 + num2;
+    console.log(result);
+}
+
+#java의 경우
+import java.util.Scanner;  
+public class AddDemo{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        System.out.printf("%d + %d = %d", a, b, a+b);
+    }
+}
+
+class Person {  필드타입 + 메소드(함수)
+    String name;
+    String gender;
+    String hair;
+    int age;
+
+    void walking(){
+         
+    }
+    void eatting(){
+
+    }
+    void wha(){
+
+    }
+}
+
+변수 = new Person();
+변수.name;
