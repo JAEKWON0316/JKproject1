@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://code.jquery.com/jquery.min.js"></script> <!--웹에서 jquery 링크로 받는법-->
+    <script>
+       // $(document).ready(function(){    /*문서가 준비되면 함수를 실행해라 그러니 위에든 아래든 상관없음*/
+          /*$('.box').click(function(){
+            alert("눌렀냐?");
+          })*/
+          /*
+          $('#mybox').click(function(){
+            alert("눌렀냐?");
+          })
+          */
+          $(function(){   //&('선택자').이벤트(함수(){});
+          $('div').click(function(){
+            let str = prompt("이름을 입력하세요.");
+            document.write("반갑습니다." + str + "님");
+          });
+        }); //jquery
+    </script>
+</head>
+<body>
+    <div class="box" id="mybox">
+        박스
+    </div>
+</body>
+</html>

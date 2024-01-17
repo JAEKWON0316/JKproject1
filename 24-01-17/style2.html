@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            width:300px;
+            height:150px;
+            border:1px solid #333;
+            /*
+            background:url(../images/001.gif) no-repeat center top;
+            background-size: cover; /*contain은 원본 크기가 박스 꽉차게*/
+            overflow:hidden;
+        }
+        .box img{
+            width:300px;
+            height:150px;
+            object-fit:cover; /*커버는 만든 박스 사이즈에 꽉차게*/
+            object-position: top center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="/images/001.gif" alt="이미지">
+    </div>
+</body>
+</html>

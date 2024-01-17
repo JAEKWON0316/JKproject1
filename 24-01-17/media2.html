@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{box-sizing: border-box;}
+        .container{
+            width:800px;
+            max-width:100%; /*부모크기의 100% */
+            margin:50px auto;
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .text-center{
+            text-align:center;
+        }
+        .container img{
+            max-width:100%;
+        }
+        .col{
+            width:33.3333%;   /*기본 3개*/
+            padding:15px 20px;
+        }
+        @media screen and (max-width:700px) {
+            .col{
+                width: 50%; /*크기가 700이 될 때 2개*/
+            }
+        }
+        @media screen and (max-width:500px) {
+            .col{
+                width: 100%; /*크기가 500이 될 때 1개*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">플랙스를 이용한 반응형 디자인</h1>
+    <div class="container">
+        <div class="col">
+            <img src="/images/001.gif">
+        </div>
+        <div class="col">
+            <img src="/images/002.gif">
+        </div>
+        <div class="col">
+            <img src="/images/003.gif">
+        </div>
+        <div class="col">
+            <img src="/images/004.gif">
+        </div>
+        <div class="col">
+            <img src="/images/005.gif">
+        </div>
+        <div class="col">
+            <img src="/images/006.gif">
+        </div>
+        <div class="col">
+            <img src="/images/007.gif">
+        </div>
+        <div class="col">
+            <img src="/images/008.gif">
+        </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            width:200px;
+            height:100px;
+            background:blue;
+            animation-name: slidebox;
+            animation-delay:0.5s;
+            animation-duration:1s;
+        }
+        /*animate.css에서 찾아보면 애니메이션에 관해 많이 나와있다*/
+        @keyframes slidebox {   /*애니메이션 호출 함수*/
+            from { 
+                opacity: 0;
+                transform : translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform : translateY(0);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
