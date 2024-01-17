@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+</head>
+<body>
+    <form name="fileform">
+       <input type="file" name="myfile" onchange="viewfile()">
+       <!-- <button onclick="viewfile()">클릭</button> -->
+    </form>
+<script>
+   function viewfile(){
+      const filename = document.fileform.myfile.value;
+      const vfile = filename.split('\\').pop();
+    //   document.write(filename);
+    //   for(let i = 0; i<arrFile.length; i++){
+    //      document.write(arrFile[i] + "<br>");
+    //   }
+     const ext = vfile.split(".").pop();
+     document.write("파일명은 " + vfile + " 이며 확장자는 " + ext +" 입니다.");
+   }
+//   const str = "나는, 정말, 당신을, 사랑합니다.";
+//   const arrStr = str.split(',');
+//       for(let i = 0; i<arrStr.length; i++){
+//          document.write(arrStr[i] + "<br>");
+//       }
+</script>
+</body>
+</html>
