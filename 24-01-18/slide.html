@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>   /*스타일시트는 jquery보다 앞에쓴다*/
+        .box{
+            padding:30px;
+            background:#000;
+            color:#fff;
+        }
+        
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){  //초기 jquery 생성 함수
+          // $(document).ready(function(){  
+            $('.hide').click(function(){ //
+             $('.box').slideUp(1000);    // 슬라이드로 박스가 올라감
+            });
+            $('.show').click(function(){  //
+             $('.box').slideDown(2000, function(){  // 슬라이드로 박스가 내려옴
+             alert("슬라이드가 끝났습니다."); //jS는 동기화로 순차적으로 하는게 아니라 명령 끝나자마자 바로바로 명령해서 비동기임
+            })});                           //그러기 때문에 slideDown함수안에 function()을 하나 더 넣어주면 동기로된다.
+            $('.toggle').click(function(){
+                $('.box').slideToggle();    // 슬라이드 자동 토글
+            });
+        });      //*** jquery end *****
+       
+    </script>
+</head>
+<body>
+    <button class="hide">사라져라</button>
+    <button class="show">나와라</button>
+    <button class="toggle">자동</button>
+   
+    <div class="box">안녕하세요?</div>
+</body>
+</html>

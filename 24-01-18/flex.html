@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .parent{
+            padding:10px;
+            background-color:dodgerblue;
+            display:flex; /*기본값 row(가로정렬)
+            /*flex-direction: row-reverse; /*처음박스가 맨 오른쪽부터*/
+            /*justify-content: flex-end; /*박스가 오른쪽으로 붙음(row-reverse)와 순서가 다름*/
+            flex-direction:row;
+            /*flex-wrap: wrap; /*웹페이지 크기 줄일 때 줄 바꿈 허용*/
+            /*flex-flow:row wrap; /*위에 2가지 한 번에 쓰는법*/
+            justify-content:space-around; /*각 박스의 절반 간격으로 똑같이 띄어줌*/
+            /*justify-content:space-between; /*맨 끝쪽 박스를 양쪽에 붙히고 같은 간격으로 띄어줌*/
+            
+            /*align-items: stretch; /*부모의 크기만큼 자식박스의 크기를 늘려줌(기본값)*/
+            /*align-items:baseline; /*align-items는 안에 자식박스의 정렬을 뜻함*/
+            /*align-items: center;*/
+            /*align-content: space-between;*/
+            height:400px;
+            
+        }
+        .parent > div{
+            background-color: #f1f1f1;
+            width:100px;
+            margin:10px;
+            text-align:center;
+            font-size:40px;
+            line-height:100px;
+            /*height:100px;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div style="order:3; flex-shrink:0;">1</div>  <!--order로 순서를 임의로 변경할 수 있다-->
+        <div style="order:4; ">2</div>
+        <div style="order:5; flex-shrink:2; align-self: center;">3</div>
+        <div style="order:1; ">4</div>
+        <div style="order:2; ">5</div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>   /*스타일시트는 jquery보다 앞에쓴다*/
+        .box{
+            padding:30px;
+            background:#000;
+            color:#fff;
+        }
+        
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){  //초기 jquery 생성 함수
+          // $(document).ready(function(){  
+            $('.hide').click(function(){ //hide클래스를 누르면 안에 함수실행
+             $('.box').fadeOut(1000);    //박스클래스가 사라져라 == hide 하지만, fade함수가 더 부드럽게 잘 나온다.
+            });
+            $('.show').click(function(){  //show클래스를 누르면 안에 함수실행
+             $('.box').fadeIn(2000);  //박스클래스가 나와라 == show
+            });
+            $('.toggle').click(function(){
+                $('.box').fadeToggle();    //toggle은 자동버튼(나왔다 사라졌다) ==toggle
+            });
+            $('.fadeTo').click(function(){
+                $('.box').fadeTo(1000,0.3);    //fadeTo는 준 투명도값까지만 나온다
+            });
+            
+        });      //*** jquery end *****
+    </script>
+</head>
+<body>
+    <button class="hide">사라져라</button>
+    <button class="show">나와라</button>
+    <button class="toggle">자동</button>
+    <button class="fadeTo">fadeTo</button>
+    <div class="box">안녕하세요?</div>
+</body>
+</html>
