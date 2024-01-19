@@ -1,0 +1,26 @@
+*{box-sizing: border-box;}
+body{
+    overflow:hidden; /*한 화면에만 나오게 자동차가 밖으로 나가면 스크롤이 생기니까*/
+}
+.mycar{
+    position:absolute; /*포지션을 잡아줘야 움직인다!! 기준값 body*/
+    width:60px;
+    height:62px;
+    background:url('../images/KakaoTalk_20240119_145202992_01.png');
+    transform: rotate(180deg);
+}
+.cloud{
+    position:absolute;  /* mycar안에 있으므로 mycar가 위치값*/
+    bottom:-70px;
+    left:18px;
+    display:none;
+} 
+.park{
+    width:80px;
+    height:80px;
+    border:5px solid saddlebrown;
+    border-top:none;
+    position:fixed;
+    right:50px;
+    bottom:50px;
+}

@@ -1,0 +1,129 @@
+.container{
+    width:100%;
+    height:800px;
+    border:1px solid #333;
+    position:relative;
+    margin:20px auto;
+    background:#333;
+    
+}
+img{
+    position:absolute;
+    width:20%;
+    height:400px;
+    left:800px;
+    top:20%;
+    z-index:1;
+    animation-name: random-action2;
+    animation-duration:2s;
+}
+.box1{
+  position:absolute;
+  top:20%;
+  left:150px;
+  background-color:#fff;
+  width:20%;
+  height:400px;
+  z-index:5;
+  
+}
+.box2{
+    position:absolute;
+    top:20%;
+    left:800px;
+    background-color:#fff;
+    width:20%;
+    height:400px;
+    z-index:5;
+}
+.box3{
+    position:absolute;
+    top:20%;
+    left:1450px;
+    background-color:#fff;
+    width:20%;
+    height:400px;
+    z-index:5;
+}
+.btn-box{
+    text-align:center;
+}
+.btn{
+    color:#fff;
+    background-color:#333;
+}
+.container>div{
+  animation-name: random-action;
+  animation-duration:1.3s;
+
+}
+@keyframes random-action {
+    0%{
+      opacity:1;
+    }
+    10%{
+        opacity:0.3;
+    }
+    20%{
+        opacity:0.9;
+    }
+    30%{
+        opacity:0.3;
+    }
+    40%{
+        opacity:0.9;
+    }
+    50%{
+        opacity:0.3;
+    }
+    60%{
+        opacity:0.9;
+    }
+    70%{
+        opacity:0.3;
+    }
+    80%{
+        opacity:0.9;
+    }
+    90%{
+        opacity:0;
+    }
+    99%{
+      opacity:1;
+    }
+}
+@keyframes random-action2{
+    0%{
+      opacity:0;
+    }
+    10%{
+        opacity:0;
+    }
+    20%{
+        opacity:0;
+    }
+    30%{
+        opacity:0;
+    }
+    40%{
+        opacity:0;
+    }
+    50%{
+        opacity:0;
+    }
+    60%{
+        opacity:0;
+    }
+    70%{
+        opacity:0;
+    }
+    80%{
+        opacity:0;
+    }
+    90%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
