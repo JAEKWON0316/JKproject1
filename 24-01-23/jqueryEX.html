@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            width:200px;
+            height:200px;
+            border:1px solid #333;
+        }
+        .box2{
+            width:50px;
+            height:50px;
+            background:red;
+        }
+    </style>
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //getter , setter
+            // var str = $('#box').text();   //안에 아무것도 안써주면 getter 값을 받아옴
+            // $('button').click(function(){
+            //     $('#box').text("반갑습니다."); //안에 값을 써주면 setter 값을 설정해줌
+            // });
+            //var str=$('#box').html();
+            /*
+            $('button').click(function(){
+               $('#box').html("<p style='color:red'>안녕하세요</p>");
+            }); */
+            // $('button').click(function(){
+            //     if($('#box').val()==""){  //안에 내용이 없을 시
+            //     alert("내용을 입력하세요:"); //알러트 창 출력
+            //   }
+            // });
+            const box2 = "<div class='box2'></div>";
+            $(".before").click(function(){
+                    $('.box2').remove();
+                    $(".box").before(box2);
+            });
+            $(".after").click(function(){
+                  $('.box2').remove();
+                     $(".box").after(box2);
+            });
+            $(".prepend").click(function(){
+                  $('.box2').remove();
+                  $(".box").prepend(box2);
+            });
+            $(".append").click(function(){
+                $('.box2').remove();
+                $(".box").append(box2);
+            });
+        }); //jquery
+    </script>
+</head>
+<body>
+    <!--<div id="box"><p style="color:red">안녕하세요</p></div>
+    <input type="text" id="box">
+    <button onclick="str()">누르시오.</button>-->
+    <div class="box">123</div>
+    <button class="before">before</button>
+    <button class="after">after</button>
+    <button class="prepend">prepend</button>
+    <button class="append">append</button>
+    
+</body>
+</html>
