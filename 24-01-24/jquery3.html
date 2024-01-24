@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+          .container *{
+            display:block;
+            border:2px solid #333;
+            color:#999;
+            padding:8px;
+            margin:15px;
+        }
+    </style>
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            //$('p').eq().css('background','yellow'); //eq는 배열로 정렬
+            //$('p').not('.h').css('background','yellow'); //p중 클래스가 h가 아닌것들
+           // $('p').filter('.h').css('background','yellow'); //p중 클래스가 h인 것들
+           $('p').click(function(){
+            $('p').css('background','white');
+            const ct = $(this).index(); //index 순서값으로 정렬
+            $('p').eq(ct - 1).css('background','yellow'); //eq는 배열이니까 ct번호에서 1을 빼준다.
+           });
+        }); //jquery
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>제 홈페이지에 온 것을 환영합니다.</h1>
+        <p>가시려구요?</p>
+        <p>못 가요</p>
+        <p>발병 난다구요</p>
+        <p class="h">정말 갈거예요?</p>
+        <p>흥, 잘가요 그럼.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <Style>
+        /*
+        div{
+            width:100px;
+            height:100px;
+        }
+        .box1{ background-color: red;}
+        .box2{ background-color: purple;}
+        .box3{ background-color: lawngreen;}
+        */
+        #test, #test2{
+            font-size:40px;
+            font-weight: bold;
+        }
+    </Style>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+        <script>
+                //$(function(){
+                    $(document).ready(function(){
+                   /* $('div').click(function(){
+                     $(this).css({
+                       "background-color": "yellow",
+                       "font-size": "20px",
+                       "color": "#000" 
+                     });
+                    });*/
+                    $('img').click(function(){
+                        const w = $(this).width(); //this 이미지의 크기
+                        const h = $(this).height(); //this 이미지의 높이
+                        const str = "이 이미지는 가로 " + w + "px, 세로 " + h +"px 입니다."; //str에 저장
+                        $('p').text(str); //p에 텍스트로 str 출력!!
+                    });
+                    $('.btn').click(function(){
+                        $('#image').attr('src', '/images/winter002.jpg') //attr은 키값을 가져와서 바꿈 하나쓰면 getter 두개쓰면 setter, src == 소스의 경로
+                    });
+                    $('.btn2').click(function(){
+                        alert($('#naver').attr('href')); //href == 주소 즉, ID 네이버의 href 주소를 getter한다.
+                    })
+                }); //jquery
+    </script>
+</head>
+<body>
+    <!--
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div> -
+    <p></p>
+    <img src="../lh.clone/images/icon_sec1_1.png" alt="001">
+    <p id="test" class="test">반가와요</p>
+    <p>안녕하세요?</p>
+    <p>반갑습니다.</p>
+    <p id="test"></p>
+    <p id="test2"></p>-->
+    <img id="image" src="/images/winter001.jpg" alt="snow">
+    <button onclick="myBtn()">이미지변경</button>
+    <button class="btn">jquery 이미지 변경</button>
+    <br>
+    <a href="http://naver.com" id="naver">네이버</a>
+    <button class="btn2">네이버주소빼기</button>
+    <script>
+        function myBtn(){
+            document.getElementById("image").src = "/images/winter002.jpg";
+        }
+        //const ell = document.getElementsByTagName("p");
+        //document.getElementById("test").innerHTML = ell[1].innerHTML; //TagName으로 p를 받은 배열은 ell에 저장 후 innerHTML로 출력
+        //const p = document.getElementsByTagName("p");
+        //const id = document.getElementById("test");
+        //const cla = document.getElementsByClassName("test");
+        //console.log(cla); 콘솔로 찍어보면 안에 있는 노드 내용들을 확인 할 수 있다.
+    </script>
+   
+</body>
+</html>
