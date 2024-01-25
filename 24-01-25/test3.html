@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            margin:0;
+        }
+        ul.tab{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            border:1px solid #ccc;
+            background:#eee;
+            width:80px;
+            text-align:center;
+            display:flex;
+            flex-direction: column;
+        }
+        .tab a{
+            display:block;
+            padding:15px 20px;
+            font-size:18px;
+            color:#000;
+            text-decoration: none;
+            transition:all 0.3s;
+            height:50px;   
+        }
+        .tab a.active,
+        .tab a:hover{
+            background-color:#ccc;
+            color:#000;
+            font-weight: bold;
+        }
+        .tabcontent{
+            position:absolute;
+            left:80px;
+            top:0;
+            padding: 10px;
+            background:#ccc; 
+            height:150px;
+            width:600px;
+            display:none;
+        }
+           
+    </style>
+</head>
+<body>
+    <ul class="tab">  <!--#london 은 id="london"의 주소를 가져온다-->
+        <li><a href="#london" id="default" class="tablinks active">런던</a></li> <!--#을 써주면 링크는 있지만 값이없다.(기능을 중지시킨다.)-->
+        <li><a href="#paris" class="tablinks">파리</a></li>
+        <li><a href="#seoul" class="tablinks">서울</a></li>
+    </ul>
+    <div id="london" class="tabcontent">
+        <h3>런던</h3>
+        <p>런던은 영국의 수도 입니다. 런던 지하철은 역사와 전통이 매우 깊어요.
+            그래서 오줌 지린네가 많이 난답니다.
+        </p>
+    </div>
+    <div id="paris" class="tabcontent">
+        <h3>파리</h3>
+        <p>파리는 프랑스의 수도 입니다. 에펠탑으로 유명한 예술의 도시입니다.
+            파리사람들은 동물을 매우 사랑합니다. 그래서 파리에는 쥐가 많아요.
+        </p>
+    </div>
+    <div id="seoul" class="tabcontent">
+        <h3>서울</h3>
+        <p>서울은 대한민국의 수도 입니다. 서울 중앙에는 매우 커다란 강이 있어요.
+            서울 시민들은 그 커다란 강인 한강을 좋아해요. 그래서 한강변을 따라
+            높은 빌딩이 많지요. 그래서 다른 곳에서는 한강이 안보여요.
+        </p>
+    </div>
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script>
+       
+      $(function(){
+        // $('.tabcontent').eq(0).show(); //eq는 배열로 저장
+        $('.tablinks').click(function(e){ //e로 값을 받음
+            e.preventDefault(); //jsvoid(0)와 똑같은 기능 기능중단. 그냥 링크인 척만.
+            $('.tabcontent').hide(); //본문을 모두 안보이게 처리
+            $('.tablinks').removeClass('active'); //active 제거
+            $(this).addClass('active'); //클릭한 곳에 active 추가
+            const cityName = $(this).attr("href"); //attribute 속성값 getter setter 클릭한곳의 href값을 가져옴
+            $(cityName).fadeIn(); //href 값과 tabcontent의 id 값이 일치하면 보이게 처리
+        });
+      }); //jquery
+    </script>
+</body>
+</html>

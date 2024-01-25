@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap01</title>
+    <link rel="stylesheet" href="../css/bootstrap.css"> <!--css은 rel과 href로!!-->
+    <style>
+        [class*=col]{
+            margin-top:30px;
+        }
+        div.in{
+            min-height:150px;
+            background:#ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">   <!--bootstrap은 자동으로 반응형으로 만들어준다. 반응형 고정너비 컨테이너-->
+        <h1>Hello Bootstrap!!</h1>
+        <p>부트스트랩의 세계에 오신 것을 환영 합니다.</p>
+        <div class="row">  <!--x3s에서 bootstrap을 보면 gird에 대해 어느 크기에서 바뀌는지 나와있다.-->
+            <div class="col-12 col-md-6 col-xl-4 col-xxl-3">  
+                <div class="in text-danger bg-primary">1</div>  <!--w3s bootstrap에 칼라값 배경값 다 나와있다.-->
+                </div>
+            <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <div class="in text-warning bg-success">1</div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <div class="in text-success bg-info">1</div>
+                </div>
+            <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <div class="in text-info bg-warning">1</div>
+                </div>
+            <div class="col-12 col-md-6 col-xl-4 col-xxl-3">
+                <div class="in text-primary bg-danger">1</div>
+                </div>
+        </div>
+    </div>
+    <div class="container-fluid">  <!--웹페이지 꽉차게 만들어주는 container-fluid-->
+
+    </div>
+
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
