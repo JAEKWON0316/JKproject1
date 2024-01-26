@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box{
+            border:1px solid #333;
+            width:200px;
+            height:40px;
+            text-align:center;  /*안에 텍스트 가운데로*/
+            line-height: 40px; /*텍스트에 높이를 줘서 정가운데로*/
+            border-radius: 8px;
+            position:relative;
+            overflow:hidden; /*box2를 안보이게 함 안보이게 한 다음 쿼리로 보이게함*/
+            margin:auto;
+        }
+        .box2{
+            content:"";
+            width:300px;
+            height:40px;
+            background:#0650f1;
+            position:absolute;  
+            z-index:-1;
+            transform:skew(-45deg);
+            top:0;
+            left:-320px;
+            transition: all 0.3s;
+          
+        }
+        .box2.box_after{
+            left:-20px;
+            transition: all 0.3s;
+        }
+        /*가상 클래스 만들어서 색채우기
+        .box::after{
+            content:"";
+            width:300px;
+            height:40px;
+            background:#0650f1;
+            position:absolute;   /*relative, absolute는 위치값을 top,left를 줘서 잡는다!!
+            transform:skew(-45deg);
+            z-index:-1;
+            top:0;
+            left:-320px;
+            transition: all 0.3s;
+        }
+        .box:hover::after{
+            left:-20px;
+        }
+        */
+    </style>
+    <Script src="../js/jquery-1.12.4.min.js"></Script>
+    <script>
+        $(function(){
+            $('.box').mouseenter(function(){
+            $('.box2').addClass('box_after');/*클래스를 추가해서 하는게 가장 간단하다! transition으로 바뀌는것임.*/
+        //    $('.box').mouseenter(function(){
+        //         $('.box2').animate({
+        //             'left':'-20px'
+        //         }, 200, function(){
+        //             $('.box').css('color','#fff');
+        //         });
+        //    });
+          });
+          $('.box').mouseleave(function(){
+            $('.box2').removeClass('.box_after');
+          });
+        }); //jquery
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="box2"></div>
+        TEST FORM
+    </div>
+</body>
+</html>
